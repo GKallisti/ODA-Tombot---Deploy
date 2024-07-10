@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Oracle Digital Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/web-sdk.js" onload="initSdk('Bots')"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img src="./images/Sin título.png" alt="Logo Oracle" class="logo">
+            <div class="header-bar"></div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">What is?</a>
+                        <div class="submenu">
+                            <p>.....</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">How does it work?</a>
+                        <div class="submenu">
+                            <p>.....</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">More</a>
+                        <div class="submenu">
+                            <p>....</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="content">
+            <div class="highlight-box">
+                <h1>TOM BOT</h1>
+                <p>Answer your questions</p>
+                <button class="chat-button" onclick="openChat()">Chat Now</button>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p class="button-like">Oracle Digital Assistant</p>
+        </footer>
+    </div>
+    <script>
+        function openChat() {
+            if (window.Bots) {
+                window.Bots.open();
+            } else {
+                console.error('Chatbot SDK is not initialized');
+            }
+        }
+    </script>
+</body>
+</html>
+
+

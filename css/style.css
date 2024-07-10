@@ -1,0 +1,151 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    background-image: url('./638ba4760787c74d06d56d25_shutterstock_552833155.webp');
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.header {
+    height: 50px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+}
+
+.logo-container {
+    height: 100%; 
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100%;
+}
+
+.header-bar {
+    flex-grow: 1; 
+    height: 5px; 
+    background-color: #ccc; 
+    margin: 0 10px; 
+}
+
+.header nav {
+    margin-left: 10px; 
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header nav ul li {
+    margin: 0 10px;
+    position: relative; 
+}
+
+.header nav ul li .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #ececf2; 
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+}
+
+.header nav ul li:hover .submenu {
+    display: block; 
+}
+
+.header nav ul li a {
+    color: #f6f9fa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    text-align: left; 
+    color: #f9f9fa;
+    flex-grow: 1;
+    padding-left: 50px; 
+}
+
+.highlight-box {
+    background-color: #add8e6; 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.highlight-box:hover {
+    background-color: #87ceeb;
+}
+
+.highlight-box h1 {
+    font-size: 32px;
+    color: black;
+}
+
+.highlight-box p {
+    font-size: 18px;
+    color: black;
+}
+
+.chat-button {
+    background-color: #006994;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; 
+}
+
+.chat-button:hover {
+    background-color: #004d73; 
+}
+
+.footer {
+    background-color: rgba(225, 225, 242, 0.8); 
+    text-align: center;
+    padding: 10px 0;
+}
+
+.button-like {
+    background-color: rgb(6, 140, 149); 
+    color: black; 
+    padding: 10px; 
+    border: 2px solid lightblue; 
+    border-radius: 5px; 
+    display: inline-block; 
+    text-align: center;
+    text-decoration: none; 
+}
+
+.button-like:hover {
+    background-color: lightblue; 
+    color: black; 
+}
+
+

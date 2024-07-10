@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ODA Web SDK 21.10</title>
+    <style>
+        body {
+            font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f5f4f2;
+            color: #312d2a;
+        }
+
+        body.dark {
+            background-color: #201e1c;
+            color: #f1fefd;
+        }
+
+        .layout {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 0 1rem;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .content {
+                max-width: 750px;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 200;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 200;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #00688c;
+        }
+
+        .dark a {
+            color: #5fa2ba;
+        }
+
+        a:visited {
+            color: #025e7e;
+        }
+
+        .dark a:visited {
+            color: #79b1c6;
+        }
+
+        code {
+            color: #34629d;
+        }
+
+        .dark code {
+            color: #6ca4dc;
+        }
+
+        code.unset {
+            color: unset;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .onoffswitch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 90px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #999999;
+            border-radius: 20px;
+        }
+
+        .onoffswitch-inner {
+            display: flex;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.1s ease-in 0s;
+        }
+
+        .onoffswitch-inner:before,
+        .onoffswitch-inner:after {
+            display: block;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: #fcfbfa;
+            font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .onoffswitch-inner:before {
+            content: "DARK";
+            padding-left: 10px;
+            background-color: #025e7d;
+            color: #fcfbfa;
+        }
+
+        .onoffswitch-inner:after {
+            content: "LIGHT";
+            padding-right: 10px;
+            background-color: #3a3631;
+            color: #dc7e6c;
+            text-align: end;
+        }
+
+        .onoffswitch-switch {
+            display: block;
+            width: 32px;
+            margin: -1px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 56px;
+            border: 2px solid #999999;
+            border-radius: 20px;
+            transition: all 0.1s ease-in 0s;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+            right: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <article class="layout">
+        <main class="content">
+            <hgroup>
+                <h1>Oracle Digital Assistant Client Web SDK</h1>
+                <h2>Version 21.10</h2>
+            </hgroup>
+            <p>We are thrilled to share the 21.10 release of the Oracle Digital Assistant Native Client SDK for Web.
+                This release introduces a couple of new features, improvements, and fixes for a few issues.
+            </p>
+            <section>
+                <h3>What's New</h3>
+                <ul>
+                    <li>
+                        <strong>Feedback component</strong> - Your skill can now collect direct, real-time user feedback
+                        using a feedback component. When users complete a conversation, this component presents users
+                        with a rating gauge. If you're using the 21.10 version of the SDK, the component presents users
+                        with a star rating system; for prior versions of the SDK, the component outputs a list of action
+                        buttons. In the new 21.10 SDK, you can customize the icon used in the rating gauge, as
+                        well as its color and size. Check out the user guide for more details on the component payload
+                        and its customization.
+                    </li>
+                    <li>
+                        <strong>Colors</strong> - The colors interface has been expanded to let you set the colors for
+                        the icons of the feedback component's rating gauge:
+                        <ul>
+                            <li><code>ratingStar</code> - The color applied to the initial unselected rating stars of
+                                the feedback message.</li>
+                            <li><code>ratingStarFill</code> - The color applied to rating stars of feedback message on
+                                hover or selection.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><code>icons</code> setting</strong> - A new <code>icons</code> field has been exposed in
+                        the initial settings that groups all customizable icons together into a single object. This
+                        makes it easy for you to organize and configure custom icons in the widget.
+                        <p>Additionally, <em>all</em> fields within the <code>icons</code> object support both image
+                            resource paths and raw SVG strings, and new icon fields have been exposed to make the
+                            widget even more customizable (<code>logo</code> in the following snippet is the 21.10
+                            counterpart to the <code>logoIcon</code> field of prior releases, for example). The
+                            pre-21.10 icon fields are still supported, but the values passed with the <code>icons</code>
+                            object take precedence over those.</p>
+                        <p>Example:</p>
+                        <code>
+                            <pre>var settings = {
+    URI: '&lt;URI&gt;',
+    channelId: '&lt;channel ID&gt;',
+    icons: {
+        logo: '&lt;svg height="24" ... &gt;&lt;/svg&gt;',
+        rating: '&lt;svg height="24" ... &gt;&lt;/svg&gt;',
+        send: '../images/oda/send.png'
+    }
+};
+                            </pre>
+                        </code>
+                        <p>
+                            To help you migrate your existing settings with the older mechanism of passing custom icons,
+                            we have provided a helper method, <code>mapRootIconsToNested</code>, in the sample app that
+                            takes the current settings, maps older icon fields to new <code>icons</code> object, and
+                            returns the updated settings that you can save and use.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Latest Oracle Redwood icons</strong> - The chat widget has been updated with the latest
+                        Oracle Redwood icons. These icons indicate their functionality with a better depiction,
+                        improving the recognition from the user.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>What's Improved</h3>
+                <ul>
+                    <li>
+                        <strong>Accessibility on Edge</strong> - Improvements have been made on the HTML elements in the
+                        chat widget to make the SDK and the sample app more accessible over the Edge browser. Hidden
+                        &lt;input&gt; element has been made non-focusable, &lt;title&gt; attribute is now set on the
+                        In-Widget Webview, and appropriate CSS rules have been added to make the styling more compatible
+                        with Edge.
+                    </li>
+                    <li>
+                        <strong>Centre-align card images</strong> - The CSS of images in cards has been updated to keep
+                        them center aligned if the width of the card increased with the widget's width.
+                    </li>
+                    <li>
+                        <strong>Clean-up on <code>destroy()</code></strong> - The SDK has been updated to better clean
+                        up its resources when the <code>destroy()</code> method is called by removing its stylesheet and
+                        images it uses from the web page.
+                    </li>
+                    <li>
+                        <strong>Embedded SVG icon for launch button</strong> - Instead of using default or custom launch
+                        icon as image blob, the icon is now added as a child element in the chat widget launch button.
+                        In the case of an SVG image, this makes it much easy for the appearance of the icon to be
+                        customizable with CSS.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>What's Fixed</h3>
+                <ul>
+                    <li>
+                        <strong>Color of links in header and footer text</strong> - The <code>colors.link</code> theme
+                        color was not being applied to the anchor links in header and footer text. This has been fixed.
+                    </li>
+                    <li>
+                        <strong>Distorted attachment file names</strong> - If an uploaded file's name contained Japanese
+                        characters, the file name appeared garbled in the chat widget. The SDK has been updated to
+                        properly display such file names containing Japanese and any other non-Latin characters.
+                    </li>
+                    <li>
+                        <strong>Global styling of <code>&lt;hr&gt;</code> element</strong> - The SDK was applying
+                        styling to <code>&lt;hr&gt;</code> element which was being applied outside the chat widget as
+                        well. It has been updated to apply the styling through a class that ensures the styles are only
+                        applicable within the widget.
+                    </li>
+                    <li>
+                        <strong>More space for custom header element</strong> - In many cases, the custom header element
+                        was being squeezed even though there was free space available in the chat header. The SDK has
+                        been updated to provide all available free space in the chat header to the custom header element
+                        if passed.
+                    </li>
+                    <li>
+                        <strong>Triggering <code>chatlanguagechange</code> event on setting current language
+                            again</strong> - The SDK has been updated to prevent triggering a
+                        <code>chatlanguagechange</code> event if the currently set chat language is selected again,
+                        either through the UI or through the <code>setChatLanguage()</code> method.
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </article>
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mode-switcher" tabindex="0" checked>
+        <label class="onoffswitch-label" for="mode-switcher">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+        <script>
+            const checkbox = document.getElementById('mode-switcher');
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    document.body.classList.remove('dark');
+                } else {
+                    document.body.classList.add('dark');
+                }
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
