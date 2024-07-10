@@ -16,29 +16,27 @@ function initSdk(name) {
         name = 'Bots'; // Set default reference name to 'Bots'
     }
 
-    var Bots;
+    // Wait for DOM content to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var chatWidgetSettings = {
+                URI: 'idcs-oda-b000510f867e45ccadeebba72a718922-da2.data.digitalassistant.oci.oraclecloud.com',
+                channelId: '3e631e7a-c8af-42e9-b16d-9900bc978ef1',
+                showConnectionStatus: true,
+                openChatOnLoad: true,
+                position: { bottom: '2px', right: '2px' },
+                initUserHiddenMessage: 'Hello',
+            };
 
-    setTimeout(function() {
-        var chatWidgetSettings = {
-            URI: 'idcs-oda-b000510f867e45ccadeebba72a718922-da2.data.digitalassistant.oci.oraclecloud.com',
-            channelId: '3e631e7a-c8af-42e9-b16d-9900bc978ef1',
-            showConnectionStatus: true,
-            openChatOnLoad: true,
-            position: { bottom: '2px', right: '2px' },
-            initUserHiddenMessage: 'Hello',
-        };
-
-        try {
-            Bots = new WebSDK(chatWidgetSettings);
-            Bots.connect();
-            // Create global object to refer Bots
-            window[name] = Bots;
-        } catch (error) {
-            console.error('Error initializing SDK:', error);
-        }
-    }, 0);
+            try {
+                var Bots = new WebSDK(chatWidgetSettings);
+                Bots.connect();
+                // Create global object to refer Bots
+                window[name] = Bots;
+            } catch (error) {
+                console.error('Error initializing SDK:', error);
+            }
+        }, 0);
+    });
 }
-
-
-
 
