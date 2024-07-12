@@ -1,18 +1,3 @@
-function openSubmenuModal(content) {
-    const submenuModal = document.getElementById('submenuModal');
-    const submenuContent = document.getElementById('submenuContent');
-
-    submenuContent.textContent = content;
-    submenuModal.setAttribute('aria-hidden', 'false');
-    submenuModal.style.display = 'block';
-}
-
-function closeSubmenuModal() {
-    const submenuModal = document.getElementById('submenuModal');
-
-    submenuModal.setAttribute('aria-hidden', 'true');
-    submenuModal.style.display = 'none';
-}
 
 function openChatVideo() {
     const videoModal = document.getElementById('videoModal');

@@ -76,20 +76,12 @@ body, html {
     z-index: 1; 
 }
 
-/* Mostrar el submenu al pasar el cursor sobre el elemento li */
-.header nav ul li:hover .submenu {
-    display: block;
-}
 
 .header nav ul li a {
     color: #f6f9fa;
     text-decoration: none;
     font-size: 14px;
 }
-.header nav ul li:hover .submenu {
-    display: block;
-}
-
 
 /* Contenido principal */
 .content {
@@ -225,9 +217,11 @@ body, html {
     z-index: 2; 
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%); 
-    width: 80%; 
-    max-width: 600px; 
+    width: 50%; 
+    height: 20%;
+    max-width: 60%; 
     background-color: rgba(255, 255, 255, 0.9); 
     border: 5px solid #888; 
     padding: 20px; 

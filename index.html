@@ -19,13 +19,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">What is?</a>
+                        <a href="#" onclick="openSubmenuModal('ODA is a tool that allows the user to have an assistant 24 hours a day, 7 days a week.')">What is?</a>
                         <div class="submenu">
                             <p>ODA is a tool that allows the user to have an assistant 24 hours a day, 7 days a week.</p>
                         </div>
                     </li>
                     <li>
-                        <a href="#">How does it work?</a>
+                        <a href="#" onclick="openSubmenuModal('It works by understanding natural language, having a conversation with the user and providing feedback as they respond.')">How does it work?</a>
                         <div class="submenu">
                             <p>It works by understanding natural language, having a conversation with the user and providing feedback as they respond.</p>
                         </div>
@@ -69,6 +69,14 @@
         </div>
     </div>
     <script>
+           function openSubmenuModal(content) {
+            document.getElementById('submenuContent').textContent = content;
+            document.getElementById('submenuModal').style.display = 'block';
+        }
+
+        function closeSubmenuModal() {
+            document.getElementById('submenuModal').style.display = 'none';
+        }
         function openChat() {
             if (window.Bots) {
                 window.Bots.open();
