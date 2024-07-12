@@ -4,49 +4,63 @@
     <meta charset="utf-8">
     <title>Oracle Digital Assistant</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/settings.js"></script>
-    <script src="scripts/web-sdk.js" onload="initSdk('Bots')"></script>
+    <script src="scripts/settings.js" defer></script>
+    <script src="scripts/web-sdk.js" defer onload="initSdk('Bots')"></script>
+    <!-- <script src="scripts/main.js" defer></script> -->
+    <script src="scripts/functions.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <a href="https://www.oracle.com" target="_blank" class="logo-container">
-                <img src="./images/Sin título.png" alt="Logo Oracle" class="logo">
+                <img src="./images/Sin título.png" alt="Oracle logo" class="logo">
             </a>
             <div class="header-bar"></div>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">What is?</a>
-                        <div class="submenu">
-                            <p>ODA is a tool that allows the user to have an assistant 24 hours a day, 7 days a week.</p>
-                        </div>
+                        <a href="#" onclick="openSubmenuModal('ODA is a tool that allows the user to have an assistant 24 hours a day, 7 days a week.')" aria-haspopup="true" aria-expanded="false">What is?</a>
                     </li>
                     <li>
-                        <a href="#">How does it work?</a>
-                        <div class="submenu">
-                            <p>It works by understanding natural language, having a conversation with the user and providing feedback as they respond.</p>
-                        </div>
+                        <a href="#" onclick="openSubmenuModal('It works by understanding natural language, having a conversation with the user and providing feedback as they respond.')" aria-haspopup="true" aria-expanded="false">How does it work?</a>
                     </li>
                     <li>
-                        <a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/learning.html" target="_blank">More</a> 
+                        <a href="https://docs.oracle.com/en/cloud/paas/digital-assistant/learning.html" target="_blank">More</a>
                     </li>
                 </ul>
             </nav>
         </header>
         
-        
         <section class="content">
             <div class="highlight-box">
                 <h1>TOM BOT</h1>
-                <p>Answer your questions</p>
-                <button class="chat-button" onclick="openChat()">Chat Now</button>
             </div>
         </section>
+        
+        <div class="button-container">
+            <button class="chat-button" onclick="openChatVideo()">View demo</button>
+        </div>
         
         <footer class="footer">
             <p class="button-like">Oracle Digital Assistant</p>
         </footer>
+    </div>
+
+    <div id="videoModal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content">
+            <button class="close" onclick="closeChatVideo()" aria-label="Close video modal">&times;</button>
+            <video id="demoVideo" controls autoplay>
+                <source src="./css/Chat-Demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="submenuModal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content">
+            <button class="close" onclick="closeSubmenuModal()" aria-label="Close submenu modal">&times;</button>
+            <p id="submenuContent"></p>
+        </div>
     </div>
     <script>
         function openChat() {
