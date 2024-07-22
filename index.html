@@ -39,7 +39,7 @@
         
         <section class="content">
             <div class="highlight-box">
-                <h1>TOM BOT</h1>
+                <p class="button-like">Oracle Digital Assistant</p>
             </div>
         </section>
         
@@ -48,7 +48,9 @@
         </div>
         
         <footer class="footer">
-            <p class="button-like">Oracle Digital Assistant</p>
+            <div class="highlight-box">
+                <button class="reset-button" onclick="reloadPage()" > Reset TOM BOT </button>
+            </div>
         </footer>
     </div>
 
@@ -77,13 +79,8 @@
         function closeSubmenuModal() {
             document.getElementById('submenuModal').style.display = 'none';
         }
-        function openChat() {
-            if (window.Bots) {
-                window.Bots.open();
-            } else {
-                console.error('Chatbot SDK is not initialized');
-            }
-        }
+
+              
     </script>
 </body>
 </html>

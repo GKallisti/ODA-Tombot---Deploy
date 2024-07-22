@@ -115,14 +115,14 @@ body, html {
 }
 
 /* Título dentro de la caja resaltada */
-.highlight-box h1 {
+.highlight-box {
     font-size: 2rem; /* Tamaño grande de fuente */
     text-transform: uppercase; /* Texto en mayúsculas */
 }
 
 /* Párrafo dentro de la caja resaltada */
 .highlight-box p {
-    font-size: 1.2rem; /* Tamaño grande de fuente */
+    font-size: 1rem; /* Tamaño grande de fuente */
 }
 
 /* Contenedor para el botón */
@@ -130,6 +130,18 @@ body, html {
     text-align: center;
     margin-top: 20px; /* Espacio superior */
 }
+
+.reset-button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: black;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.8s ease;
+}
+
 
 /* Botón de demo */
 .chat-button {
@@ -141,7 +153,8 @@ body, html {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.8s ease;
-    margin-top: 300px; /* Ajusta este valor según necesites */
+    margin-top: 200px;
+    /* Ajusta este valor según necesites  */
 }
 
 .chat-button:hover {

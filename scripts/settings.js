@@ -23,8 +23,8 @@ function initSdk(name) {
                 URI: 'idcs-oda-b000510f867e45ccadeebba72a718922-da2.data.digitalassistant.oci.oraclecloud.com',
                 channelId: '3e631e7a-c8af-42e9-b16d-9900bc978ef1',
                 showConnectionStatus: true,
-                openChatOnLoad: true,
-                position: { bottom: '2px', right: '2px' },
+                openChatOnLoad: false,
+                position: { bottom: '1.5em', right: '1.5em' },
                 initUserHiddenMessage: 'Hello',
             };
 

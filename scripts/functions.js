@@ -1,4 +1,3 @@
-
 function openChatVideo() {
     const videoModal = document.getElementById('videoModal');
     const demoVideo = document.getElementById('demoVideo');
@@ -24,4 +23,8 @@ window.onclick = function(event) {
     if (event.target == document.getElementById('submenuModal')) {
         closeSubmenuModal();
     }
+}
+function reloadPage ()   {      
+    location.reload(); 
+
 }
