@@ -120,6 +120,17 @@ body, html {
     text-transform: uppercase; /* Texto en mayúsculas */
 }
 
+.highlight-box img {
+    max-width: 100%; /* Se ajusta al ancho del contenedor */
+    width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+
+
+
 /* Párrafo dentro de la caja resaltada */
 .highlight-box p {
     font-size: 1rem; /* Tamaño grande de fuente */
