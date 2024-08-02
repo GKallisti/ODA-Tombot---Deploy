@@ -131,15 +131,11 @@ body, html {
 
 
 
-/* Párrafo dentro de la caja resaltada */
-.highlight-box p {
-    font-size: 1rem; /* Tamaño grande de fuente */
-}
-
 /* Contenedor para el botón */
 .button-container {
     text-align: center;
-    margin-top: 20px; /* Espacio superior */
+    margin-top: 1em; /* Espacio superior */
+    padding: 1em;
 }
 
 .reset-button {
@@ -164,7 +160,7 @@ body, html {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.8s ease;
-    margin-top: 200px;
+    margin-top: 250px;
     /* Ajusta este valor según necesites  */
 }
 
