@@ -21,7 +21,7 @@ function initSdk(name) {
         setTimeout(function() {
             var chatWidgetSettings = {
                 URI: 'idcs-oda-b000510f867e45ccadeebba72a718922-da2.data.digitalassistant.oci.oraclecloud.com',
-                channelId: '3e631e7a-c8af-42e9-b16d-9900bc978ef1',
+                channelId: '4dced33d-d2c4-4cf7-bfc9-ce0bc91b14f4',
                 showConnectionStatus: true,
                 openChatOnLoad: false,
                 position: { bottom: '1.5em', right: '1.5em' },
