@@ -26,6 +26,7 @@ function initSdk(name) {
                 openChatOnLoad: false,
                 position: { bottom: '1.5em', right: '1.5em' },
                 initUserHiddenMessage: 'Hello',
+                clientAuthEnabled: false
             };
 
             try {
